@@ -14,8 +14,8 @@ module OmniAuth
       # @param [String] app_secret the application secret
       def initialize(app, consumer_key, consumer_secret, options = {})
         options[:site] ||= 'https://test.salesforce.com/'
-        options[:authorize_path] ||= '/services/oauth2/authorize'
-        options[:access_token_path] ||= '/services/oauth2/token'
+        options[:authorize_url] ||= 'https://test.salesforce.com/services/oauth2/authorize'
+        options[:access_token_url] ||= 'https://test.salesforce.com/services/oauth2/token'
 
         super(app, :force, consumer_key, consumer_secret, options)
       end
